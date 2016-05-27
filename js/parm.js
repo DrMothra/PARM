@@ -160,6 +160,7 @@ PitotiAR.prototype.init = function(container) {
     this.rotPerSec = 1;
     this.loadedModel = null;
 
+    this.position = new THREE.Vector3(0, 0, 0);
     this.lastTime = 0;
 
     //Matrix store
@@ -175,13 +176,11 @@ PitotiAR.prototype.init = function(container) {
 
     this.scene = new THREE.Scene();
     var light = new THREE.PointLight(0xffffff);
-    light.position.set(0, 200, 0);
-    //DEBUG
-    var lightBoxGeom = new THREE.BoxGeometry(10, 10, 10);
-    var lightBoxMat = new THREE.MeshLambertMaterial( {color: 0xffffff });
-    var lightBox = new THREE.Mesh(lightBoxGeom, lightBoxMat);
-    this.scene.add(lightBox);
+    light.position.set(0, 200, 800);
     this.scene.add(light);
+
+    var ambient = new THREE.AmbientLight(0x383838);
+    this.scene.add(ambient);
 
     // Create a camera and a marker root object for your Three.js scene.
     this.camera = new THREE.Camera();
@@ -237,6 +236,7 @@ PitotiAR.prototype.createScene = function() {
     var boxGeom = new THREE.BoxGeometry(width, height, depth);
     var boxMat = new THREE.MeshLambertMaterial( { color: 0xff0000 });
     this.loadedModel = new THREE.Mesh(boxGeom, boxMat);
+    //this.loadedModel.doubleSided = true;
 
     /*
      var sphereGeom = new THREE.SphereGeometry(50, 12, 12);
@@ -331,6 +331,9 @@ PitotiAR.prototype.update = function() {
         }
         copyMatrix(m.transform, this.tmp);
         m.model.matrix.setFromArray(this.tmp);
+        //DEBUG
+        var elements = m.model.matrix.elements;
+        console.log("x y z = ", elements[12], elements[13], elements[14]);
         m.model.matrixWorldNeedsUpdate = true;
     }
 
