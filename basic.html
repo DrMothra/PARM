@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- include three.js -->
-<script src='js/three71.js'></script>
+<script src='js/three77.js'></script>
+<script src='js/OBJLoader.js'></script>
 <script src='js/stats.min.js'></script>
 
 <!-- include js-aruco -->
@@ -50,7 +51,7 @@
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Test if the browser support WebGL and getUserMedia
 	//////////////////////////////////////////////////////////////////////////////////
-	;(function(){
+	(function(){
 		// TODO backport those 2 in Detector.js
 		var hasGetUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia) ? true : false
 		//var hasMediaStreamTrackSources = MediaStreamTrack.getSources ? true : false
@@ -65,7 +66,7 @@
 		if( hasGetUserMedia === false ){
 			alert('your browser doesn\'t support navigator.getUserMedia()')		
 		}
-	})()
+	})();
 	
 	//////////////////////////////////////////////////////////////////////////////////
 	//		enabled/disable various parts
@@ -147,6 +148,7 @@
 	var onRenderFcts = [];
 
 	// init scene and camera
+    var clock = new THREE.Clock();
 	var scene = new THREE.Scene();
 	var camera	= new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.01, 1000);
 	camera.position.z = 2;
@@ -160,38 +162,41 @@
 	//////////////////////////////////////////////////////////////////////////////////
 	//		create a markerObject3D
 	//////////////////////////////////////////////////////////////////////////////////
-	var markerObject3D = new THREE.Object3D()
-	scene.add(markerObject3D)
+	var NUM_OBJECTS = 3;
+	var markerObjects = [];
+	var objectIDs = [1, 30, 265];
+	for(var i=0; i<NUM_OBJECTS; ++i) {
+		markerObjects.push(new THREE.Object3D());
+		markerObjects[i].markerID = objectIDs[i];
+		scene.add(markerObjects[i]);
+	}
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//		add an object in the markerObject3D
 	//////////////////////////////////////////////////////////////////////////////////
 
-	// add some debug display
-	;(function(){
-		var geometry = new THREE.PlaneGeometry(1,1,10,10)
-		var material = new THREE.MeshBasicMaterial( {
-			wireframe : true
-		})
-		var mesh = new THREE.Mesh(geometry, material);
-		markerObject3D.add( mesh );
-
-		var mesh = new THREE.AxisHelper
-		//markerObject3D.add( mesh );
-	})()
-
+    var animatedObject;
 	// add a awesome logo to the scene
-	;(function(){
-		var material = new THREE.SpriteMaterial({
-			map: THREE.ImageUtils.loadTexture( 'images/awesome.png' ),
-		});
+	(function(){
 		var geometry = new THREE.BoxGeometry(1,1,1);
-		var boxMat = new THREE.MeshLambertMaterial({ color: 0xff0000});
+		var boxMat = new THREE.MeshLambertMaterial({ color: 0x00ff00});
 		var box = new THREE.Mesh(geometry, boxMat);
-		var object3d = new THREE.Sprite(material );
-		object3d.scale.set( 2, 2, 1 );
-		markerObject3D.add(box);
-	})()
+		markerObjects[0].add(box);
+
+        var manager = new THREE.LoadingManager();
+        var loader = new THREE.OBJLoader( manager );
+
+        loader.load("models/houseAdj.obj", function(object) {
+            object.scale.set(0.1, 0.1, 0.1);
+            markerObjects[1].add(object);
+        });
+
+        loader.load("models/arrowAdj.obj", function(object) {
+            object.scale.set(0.1, 0.1, 0.1);
+            markerObjects[2].add(object);
+            animatedObject = object;
+        });
+	})();
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//		render the whole thing on the page
@@ -202,7 +207,7 @@
 		renderer.setSize( window.innerWidth, window.innerHeight )
 		camera.aspect	= window.innerWidth / window.innerHeight
 		camera.updateProjectionMatrix()
-	}, false)
+	}, false);
 
 	
 	// render the scene
@@ -212,20 +217,20 @@
 			renderer.render( scene, camera );
 		}
 		renderStats.end();
-	})
+	});
 
 	// run the rendering loop
-	var previousTime = performance.now()
+	var previousTime = performance.now();
 	requestAnimationFrame(function animate(now){
 
 		requestAnimationFrame( animate );
 
 		onRenderFcts.forEach(function(onRenderFct){
-			onRenderFct(now, now - previousTime)
-		})
+			onRenderFct(now, now - previousTime);
+		});
 
-		previousTime	= now
-	})
+		previousTime	= now;
+	});
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Do the Augmented Reality part
@@ -233,22 +238,22 @@
 
 
 	// init the marker recognition
-	var jsArucoMarker	= new THREEx.JsArucoMarker()
+	var jsArucoMarker	= new THREEx.JsArucoMarker();
 
 	// if no specific image source is specified, take the webcam by default
-	if( location.hash === '' )	location.hash = '#webcam'
+	if( location.hash === '' )	location.hash = '#webcam';
 
 	// init the image source grabbing
 	if( location.hash === '#video' ){
-		var videoGrabbing = new THREEx.VideoGrabbing()
-		jsArucoMarker.videoScaleDown = 2
+		var videoGrabbing = new THREEx.VideoGrabbing();
+		jsArucoMarker.videoScaleDown = 2;
 	}else if( location.hash === '#webcam' ){
-		var videoGrabbing = new THREEx.WebcamGrabbing()
-		jsArucoMarker.videoScaleDown = 2
+		var videoGrabbing = new THREEx.WebcamGrabbing();
+		jsArucoMarker.videoScaleDown = 2;
 	}else if( location.hash === '#image' ){
-		var videoGrabbing = new THREEx.ImageGrabbing()
-		jsArucoMarker.videoScaleDown = 10
-	}else console.assert(false)
+		var videoGrabbing = new THREEx.ImageGrabbing();
+		jsArucoMarker.videoScaleDown = 10;
+	}else console.assert(false);
 
 	// attach the videoGrabbing.domElement to the body
         document.body.appendChild(videoGrabbing.domElement)
@@ -257,26 +262,39 @@
 	//		Process video source to find markers
 	//////////////////////////////////////////////////////////////////////////////////
 	// set the markerObject3D as visible
-	markerObject3D.visible	= false
+    var i, markerIndex;
 	// process the image source with the marker recognition
 	onRenderFcts.push(function(){
-		if( detectMarkersEnabled === false )	return
-		
-		var domElement	= videoGrabbing.domElement
+		if( detectMarkersEnabled === false )	return;
+
+        markerIndex = undefined;
+		var domElement	= videoGrabbing.domElement;
 		detectMarkersStats.begin();
-		var markers	= jsArucoMarker.detectMarkers(domElement)
+		var markers	= jsArucoMarker.detectMarkers(domElement);
 		detectMarkersStats.end();
 
-		if( markerToObject3DEnabled === false )	return
-		markerObject3D.visible = false
+		if( markerToObject3DEnabled === false )	return;
+        for(var i=0; i<NUM_OBJECTS; ++i) {
+            markerObjects[i].visible = false;
+        }
+        animatedObject.position.x += clock.getDelta();
+        if(animatedObject.position.x > 1) animatedObject.position.x = 0;
 
 		// see if this.markerId has been found
+        markerIndex = undefined;
 		markers.forEach(function(marker){
 			// if( marker.id !== 265 )	return
+            for(i=0; i<NUM_OBJECTS; ++i) {
+                if(marker.id === markerObjects[i].markerID) {
+                    markerIndex = i;
+                    break;
+                }
+            }
+            if(markerIndex === undefined) return;
 
-			jsArucoMarker.markerToObject3D(marker, markerObject3D)
+			jsArucoMarker.markerToObject3D(marker, markerObjects[markerIndex]);
 
-			markerObject3D.visible = true
+			markerObjects[markerIndex].visible = true;
 		})
 	})
 </script></body>
