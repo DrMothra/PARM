@@ -18,42 +18,13 @@
 
 <body style='margin: 0px; overflow: hidden;'>
 
-<div id='info' style='position: absolute; top: 0px; width: 100%;font-family:arial; font-weight: bolder; padding-top: 5px; text-align:center;'>
-	Source:
-	<a class='webcam' href='javascript:void();'>webcam</a> -
-	<a class='image'  href='javascript:void();'>image</a> -
-	<a class='video'  href='javascript:void();'>video</a>
-</div>
-
-<div id='performanceEnabler' style='position: absolute; top: 0px; right: 0px; text-align: right;background-color:rgba(255,255,255,0.5);padding-left: 10px; padding-bottom: 10px;border-width: 1px;
-  border-style: solid;'>
-	<div style='text-align: center;'>OPTIONS</div>
-	<hr/>
-	<label id='detectMarkersEnabled' title='to enable/disable marker detection in video'>
-		detectMarkers	<input type="checkbox"> 
-	</label>
-	<br/>
-	<label id='markerToObject3DEnabled' title='to enable/disable marker to object3d conversion'>
-		markerToObject3D <input type="checkbox"> 
-	</label>
-	<br/>
-	<label id='webglRenderEnabled' title='to enable/disable webgl rendering'>
-		webglRender	<input type="checkbox"> 
-	</label>
-	<br/>
-	<label id='markerDebugEnabled' title='to enable/disable marker debug'>
-		marker debug	<input type="checkbox"> 
-	</label>
-	<br/>
-</div>
-
 <script>
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Test if the browser support WebGL and getUserMedia
 	//////////////////////////////////////////////////////////////////////////////////
 	(function(){
 		// TODO backport those 2 in Detector.js
-		var hasGetUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia) ? true : false
+		var hasGetUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia) ? true : false;
 		//var hasMediaStreamTrackSources = MediaStreamTrack.getSources ? true : false
 		var hasWebGL = ( function () { try { var canvas = document.createElement( 'canvas' ); return !! ( window.WebGLRenderingContext && ( canvas.getContext( 'webgl' ) || canvas.getContext( 'experimental-webgl' ) ) ); } catch ( e ) { return false; } } )()
 		
@@ -71,66 +42,14 @@
 	//////////////////////////////////////////////////////////////////////////////////
 	//		enabled/disable various parts
 	//////////////////////////////////////////////////////////////////////////////////
-	var detectMarkersEnabled	= true
-	var markerToObject3DEnabled	= true
-	var webglRenderEnabled		= true
-	
-	document.querySelector('#detectMarkersEnabled input').checked	= detectMarkersEnabled
-	document.querySelector('#detectMarkersEnabled input').addEventListener('change', function(){
-		detectMarkersEnabled = document.querySelector('#detectMarkersEnabled input').checked 
-	})
-
-	document.querySelector('#markerToObject3DEnabled input').checked= markerToObject3DEnabled
-	document.querySelector('#markerToObject3DEnabled input').addEventListener('change', function(){
-		markerToObject3DEnabled = document.querySelector('#markerToObject3DEnabled input').checked 
-	})
-
-	document.querySelector('#webglRenderEnabled input').checked	= webglRenderEnabled
-	document.querySelector('#webglRenderEnabled input').addEventListener('change', function(){
-		webglRenderEnabled = document.querySelector('#webglRenderEnabled input').checked
-		// clear the webgl canvas - thus the last webgl rendering disapears
-		renderer.clear()
-	})
-
-	document.querySelector('#markerDebugEnabled input').checked	= false
-	document.querySelector('#markerDebugEnabled input').addEventListener('change', function(){
-		jsArucoMarker.debugEnabled = document.querySelector('#markerDebugEnabled input').checked
-	})
-
-	//////////////////////////////////////////////////////////////////////////////////
-	//		init Stats for detectMarkers
-	//////////////////////////////////////////////////////////////////////////////////
-	var detectMarkersStats = new Stats();
-	detectMarkersStats.setMode( 1 );
-	document.body.appendChild( detectMarkersStats.domElement );
-        detectMarkersStats.domElement.style.position = 'absolute'
-	detectMarkersStats.domElement.style.bottom = '0px'
-	detectMarkersStats.domElement.style.right = '0px'
-
-	var renderStats = new Stats();
-	renderStats.setMode( 0 );
-	document.body.appendChild( renderStats.domElement );
-        renderStats.domElement.style.position = 'absolute'
-	renderStats.domElement.style.bottom = '0px'
-	renderStats.domElement.style.left = '0px'
+	var detectMarkersEnabled	= true;
+	var markerToObject3DEnabled	= true;
+	var webglRenderEnabled		= true;
+	var markerDebugEnabled = false;
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Handle ui button
 	//////////////////////////////////////////////////////////////////////////////////
-	document.querySelector('#info .webcam').addEventListener('click', function(event){
-		location.hash	= '#webcam'
-		location.reload()
-	})
-
-	document.querySelector('#info .image').addEventListener('click', function(event){
-		location.hash	= '#image'
-		location.reload()
-	})
-
-	document.querySelector('#info .video').addEventListener('click', function(event){
-		location.hash	= '#video'
-		location.reload()
-	})
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Init
@@ -212,11 +131,11 @@
 	
 	// render the scene
 	onRenderFcts.push(function(){	
-		renderStats.begin();
+		//renderStats.begin();
 		if( webglRenderEnabled === true ){
 			renderer.render( scene, camera );
 		}
-		renderStats.end();
+		//renderStats.end();
 	});
 
 	// run the rendering loop
@@ -239,24 +158,15 @@
 
 	// init the marker recognition
 	var jsArucoMarker	= new THREEx.JsArucoMarker();
+    jsArucoMarker.debugEnabled = markerDebugEnabled;
 
 	// if no specific image source is specified, take the webcam by default
-	if( location.hash === '' )	location.hash = '#webcam';
-
-	// init the image source grabbing
-	if( location.hash === '#video' ){
-		var videoGrabbing = new THREEx.VideoGrabbing();
-		jsArucoMarker.videoScaleDown = 2;
-	}else if( location.hash === '#webcam' ){
-		var videoGrabbing = new THREEx.WebcamGrabbing();
-		jsArucoMarker.videoScaleDown = 2;
-	}else if( location.hash === '#image' ){
-		var videoGrabbing = new THREEx.ImageGrabbing();
-		jsArucoMarker.videoScaleDown = 10;
-	}else console.assert(false);
+	location.hash = '#webcam';
+    var videoGrabbing = new THREEx.WebcamGrabbing();
+    jsArucoMarker.videoScaleDown = 2;
 
 	// attach the videoGrabbing.domElement to the body
-        document.body.appendChild(videoGrabbing.domElement)
+        document.body.appendChild(videoGrabbing.domElement);
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Process video source to find markers
@@ -269,9 +179,9 @@
 
         markerIndex = undefined;
 		var domElement	= videoGrabbing.domElement;
-		detectMarkersStats.begin();
+		//detectMarkersStats.begin();
 		var markers	= jsArucoMarker.detectMarkers(domElement);
-		detectMarkersStats.end();
+		//detectMarkersStats.end();
 
 		if( markerToObject3DEnabled === false )	return;
         for(var i=0; i<NUM_OBJECTS; ++i) {
