@@ -1,0 +1,1072 @@
+newmtl B10_walls_lev01_03SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.32 0.24 0.19
+newmtl DepthShader1:DepthShaderSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl OtherStuff:pav_gen_build_1and2_v12:blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.20 0.17
+newmtl OtherStuff:pav_gen_build_1and2_v12:woodBeams_v02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.53 0.40 0.23
+newmtl OtherStuff3:pav_gen_build_1and2_v12:pav_gen_build_1and2_v12_ROOF_AFRAME_ROOF_blinn6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.26 0.17 0.13
+newmtl PAV_030_020_B10_v070_trees:AFRAME_ROOF_blinn6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.27 0.21 0.18
+newmtl PAV_030_020_B10_v070_trees:ROCK_PROC1SG
+illum 4
+Kd 0.09 0.08 0.07
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.71 0.62 0.53
+newmtl PAV_030_020_B10_v070_trees:ROID_PROCSG
+illum 4
+Kd 0.56 0.51 0.43
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.71 0.62 0.53
+newmtl PAV_030_020_B10_v070_trees:beams_lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 0.68 0.56
+newmtl PAV_030_020_B10_v070_trees:blinn1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.57 0.57
+newmtl PAV_030_020_B10_v070_trees:blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+newmtl PAV_030_020_B10_v070_trees:blinn3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.37 0.34 0.31
+newmtl PAV_030_020_B10_v070_trees:blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.32 0.24 0.19
+newmtl PAV_030_020_B10_v070_trees:blinn5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.42 0.39
+newmtl PAV_030_020_B10_v070_trees:build_10_STUFF:B10_steps_blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.75 0.69 0.57
+newmtl PAV_030_020_B10_v070_trees:build_10_STUFF:pot_proc_v01SG
+illum 4
+Kd 0.58 0.31 0.22
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.71 0.34 0.21
+newmtl PAV_030_020_B10_v070_trees:buildings_blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl PAV_030_020_B10_v070_trees:groundRed_surfaceShader1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+newmtl PAV_030_020_B10_v070_trees:imp:iP:pasted__lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.26 0.11 0.05
+newmtl PAV_030_020_B10_v070_trees:imp:iP:roof_mud_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.57 0.57
+newmtl PAV_030_020_B10_v070_trees:imp:iP1:pav_gen_mod_build_10_REF3_pav_gen_mod_build_10_v31_mkSHADERS_blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+newmtl PAV_030_020_B10_v070_trees:imp:iP1:roof6:pasted__blinn7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.85 0.74 0.56
+newmtl PAV_030_020_B10_v070_trees:imp:iP2:pav_gen_build_08_v05:walls_col_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl PAV_030_020_B10_v070_trees:imp:iP3:lambert12SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl PAV_030_020_B10_v070_trees:imp:iP3:lambert13SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl PAV_030_020_B10_v070_trees:imp:iP3:pav_gen_build_08_v04:walls_col_03SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.78 0.56 0.38
+newmtl PAV_030_020_B10_v070_trees:imp:iP3:pav_gen_build_08_v04:walls_mudSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl PAV_030_020_B10_v070_trees:imp:iP3:windows_framesSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl PAV_030_020_B10_v070_trees:imp:iP4:roof_top_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl PAV_030_020_B10_v070_trees:imp:iP6:wall_baseSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl PAV_030_020_B10_v070_trees:imp:iP7:lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl PAV_030_020_B10_v070_trees:imp:iP7:pav_gen_build_08_v04:walls_mudSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl PAV_030_020_B10_v070_trees:imp:iP7:pav_gen_build_1and2_v09:walls1:blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.53 0.57
+newmtl PAV_030_020_B10_v070_trees:imp:pav_gen_mod_build_10_REF4:newRoof_blinn6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.33 0.22 0.17
+newmtl PAV_030_020_B10_v070_trees:imp:pav_gen_mod_build_10_REF4:newRoof_lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+newmtl PAV_030_020_B10_v070_trees:imp:walls_col_05SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl PAV_030_020_B10_v070_trees:imp13:imp3:bgBigPlaneShdrSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.11 0.09 0.06
+newmtl PAV_030_020_B10_v070_trees:imp14:AFRAME_ROOF_blinn6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.30 0.24
+newmtl PAV_030_020_B10_v070_trees:imp14:blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.60 0.58 0.51
+newmtl PAV_030_020_B10_v070_trees:imp14:wall_gen_pink_v02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.72 0.62 0.56
+newmtl PAV_030_020_B10_v070_trees:imp14:wall_gen_yellow_v01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.78 0.59 0.35
+newmtl PAV_030_020_B10_v070_trees:imp14:walls1:blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.53 0.57
+newmtl PAV_030_020_B10_v070_trees:imp14:walls1:blinn5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.42 0.39
+newmtl PAV_030_020_B10_v070_trees:imp14:walls1:walls_lev02_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.44 0.30
+newmtl PAV_030_020_B10_v070_trees:imp14:walls_lev02_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.50 0.41
+newmtl PAV_030_020_B10_v070_trees:imp14:win_gen_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.53 0.57
+newmtl PAV_030_020_B10_v070_trees:imp15:Building2_ForBackgroundExportRender_Combinedmb:OtherStuff:pav_gen_build_1and2_v12:blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.60 0.58 0.51
+newmtl PAV_030_020_B10_v070_trees:imp15:Building2_ForBackgroundExportRender_Combinedmb:OtherStuff:pav_gen_build_1and2_v12:blinn3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+newmtl PAV_030_020_B10_v070_trees:imp15:Building2_ForBackgroundExportRender_Combinedmb:OtherStuff:pav_gen_build_1and2_v12:pav_gen_build_1and2_v12_ROOF_AFRAME_ROOF_blinn6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.30 0.24
+newmtl PAV_030_020_B10_v070_trees:imp15:Building2_ForBackgroundExportRender_Combinedmb:OtherStuff:pav_gen_build_1and2_v12:win_gen_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.53 0.57
+newmtl PAV_030_020_B10_v070_trees:imp15:Building2_ForBackgroundExportRender_Combinedmb:OtherStuff:pav_gen_build_1and2_v12:woodBeams_v02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.92 0.69 0.39
+newmtl PAV_030_020_B10_v070_trees:imp15:Building2_ForBackgroundExportRender_Combinedmb:walls_plaster:wall_gen_pink_v02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.72 0.62 0.56
+newmtl PAV_030_020_B10_v070_trees:imp15:Building2_ForBackgroundExportRender_Combinedmb:walls_plaster:wall_gen_yellow_v01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.78 0.59 0.35
+newmtl PAV_030_020_B10_v070_trees:imp15:Building2_ForBackgroundExportRender_Combinedmb:walls_plaster:walls1:blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.53 0.57
+newmtl PAV_030_020_B10_v070_trees:imp15:Building2_ForBackgroundExportRender_Combinedmb:walls_plaster:walls1:walls_lev02_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.44 0.30
+newmtl PAV_030_020_B10_v070_trees:lambert25SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl PAV_030_020_B10_v070_trees:lambert26SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl PAV_030_020_B10_v070_trees:lambert27SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl PAV_030_020_B10_v070_trees:live_walls_wipreWalltex_walls_lev01_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.29 0.41 0.38
+newmtl PAV_030_020_B10_v070_trees:live_wood:lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 0.85 0.77
+newmtl PAV_030_020_B10_v070_trees:live_wood2:blinn3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.37 0.34 0.31
+newmtl PAV_030_020_B10_v070_trees:olivetrees2:oliveTrees_Grp:blinn10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.93 0.93 0.51
+newmtl PAV_030_020_B10_v070_trees:olivetrees2:oliveTrees_Grp:leaf_colour
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.38 0.43 0.17
+newmtl PAV_030_020_B10_v070_trees:pasted__blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.59 0.52 0.43
+newmtl PAV_030_020_B10_v070_trees:pav_gen_build_04_v05_gj1:lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.71 0.47 0.35
+newmtl PAV_030_020_B10_v070_trees:pav_gen_build_04_v05_gj1:roof_mud_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.57 0.57
+newmtl PAV_030_020_B10_v070_trees:pav_gen_build_04_v05_gj1:roof_mud_02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.23 0.15 0.11
+newmtl PAV_030_020_B10_v070_trees:pav_gen_build_04_v05_gj1:wall_baseSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.75 0.75 0.75
+newmtl PAV_030_020_B10_v070_trees:pav_gen_build_04_v05_gj1:walls_col_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.30 0.26 0.24
+newmtl PAV_030_020_B10_v070_trees:pav_gen_build_04_v05_gj1:walls_col_04SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl PAV_030_020_B10_v070_trees:pav_gen_build_04_v05_gj1:walls_mudSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.37 0.35 0.32
+newmtl PAV_030_020_B10_v070_trees:pav_gen_build_04_v05_gj1:windowsSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.59 0.52 0.43
+newmtl PAV_030_020_B10_v070_trees:roof:pasted__blinn7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.85 0.74 0.56
+newmtl PAV_030_020_B10_v070_trees:wall_gen_blue_v01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl PAV_030_020_B10_v070_trees:walls_col_02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.75 0.75 0.75
+newmtl PAV_030_020_B10_v070_trees:walls_col_03SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl PAV_030_020_B10_v070_trees:walls_col_05SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.36 0.36 0.36
+newmtl PAV_030_020_B10_v070_trees:walls_col_06SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.27 0.27 0.27
+newmtl PAV_030_020_B10_v070_trees:walls_lev02_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.50 0.41
+newmtl PAV_030_020_B10_v070_trees:walls_mudSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl PAV_030_020_B10_v070_trees:woodBeams_v02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl ROCK_PROC1SG
+illum 4
+Kd 0.09 0.08 0.07
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.71 0.62 0.53
+newmtl ROID_PROCSG
+illum 4
+Kd 0.56 0.51 0.43
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.71 0.62 0.53
+newmtl b10_AFRAME_ROOF_blinn6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.27 0.21 0.18
+newmtl b10_blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+newmtl b10_walls_lev02_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.50 0.41
+newmtl beams_lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 0.85 0.77
+newmtl beams_lambert10SG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 0.85 0.77
+newmtl bg_builds_blinn1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.57 0.57
+newmtl bg_builds_wall_gen_blue_v01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl blinn3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.37 0.34 0.31
+newmtl blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.32 0.24 0.19
+newmtl blinn5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.42 0.39
+newmtl build_10_STUFF:B10_steps_blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.75 0.69 0.57
+newmtl buildings_blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl citySideNShdrSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.16 0.12
+newmtl crossing10hdr_2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.31 0.25 0.19
+newmtl groundRed:crossing10hdr1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.31 0.25 0.19
+newmtl groundRed:roadR10ShdrSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.31 0.25 0.19
+newmtl groundRed2:citySideNShdrSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.16 0.12
+newmtl groundSouthShdrSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.16 0.12
+newmtl imp:iP:pasted__lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.26 0.11 0.05
+newmtl imp:iP:roof_mud_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.57 0.57
+newmtl imp:iP1:roof6:pasted__blinn7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.85 0.74 0.56
+newmtl imp:iP2:pav_gen_build_08_v05:walls_col_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl imp:iP3:lambert12SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl imp:iP3:lambert13SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl imp:iP3:pav_gen_build_08_v04:walls_col_03SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.78 0.56 0.38
+newmtl imp:iP3:pav_gen_build_08_v04:walls_mudSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl imp:iP3:windows_framesSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl imp:iP4:roof_top_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl imp:iP6:wall_baseSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl imp:iP7:lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl imp:iP7:pav_gen_build_08_v04:walls_mudSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl imp:iP7:pav_gen_build_1and2_v09:walls1:blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.53 0.57
+newmtl imp:pav_gen_mod_build_10_REF4:newRoof_blinn6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.33 0.22 0.17
+newmtl imp:pav_gen_mod_build_10_REF4:newRoof_lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+newmtl imp:walls_col_05SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl imp14:AFRAME_ROOF_blinn6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.30 0.24
+newmtl imp14:blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.60 0.58 0.51
+newmtl imp14:wall_gen_pink_v02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.72 0.62 0.56
+newmtl imp14:wall_gen_yellow_v01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.78 0.59 0.35
+newmtl imp14:walls1:blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.53 0.57
+newmtl imp14:walls1:blinn5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.42 0.39
+newmtl imp14:walls1:walls_lev02_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.44 0.30
+newmtl imp14:walls_lev02_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.50 0.41
+newmtl imp14:win_gen_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.53 0.57
+newmtl imp15:Building2_ForBackgroundExportRender_Combinedmb:OtherStuff:pav_gen_build_1and2_v12:blinn3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+newmtl imp15:Building2_ForBackgroundExportRender_Combinedmb:OtherStuff:pav_gen_build_1and2_v12:woodBeams_v02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.92 0.69 0.39
+newmtl imp15:Building2_ForBackgroundExportRender_Combinedmb:walls_plaster:walls1:blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.53 0.57
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 0.85 0.77
+newmtl live_wood:lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 0.85 0.77
+newmtl pasted__blinn3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.65 0.60 0.56
+newmtl pasted__blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.59 0.52 0.43
+newmtl pav_gen_build_04_v05_gj1:lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.71 0.47 0.35
+newmtl pav_gen_build_04_v05_gj1:roof_mud_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.57 0.57
+newmtl pav_gen_build_04_v05_gj1:roof_mud_02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.23 0.15 0.11
+newmtl pav_gen_build_04_v05_gj1:wall_baseSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.75 0.75 0.75
+newmtl pav_gen_build_04_v05_gj1:walls_col_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.30 0.26 0.24
+newmtl pav_gen_build_04_v05_gj1:walls_col_04SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl pav_gen_build_04_v05_gj1:walls_mudSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.37 0.35 0.32
+newmtl pav_gen_build_04_v05_gj1:windowsSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.59 0.52 0.43
+newmtl rock_base:masonry_element:ROID_PROCSG
+illum 4
+Kd 0.56 0.51 0.43
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.54 0.46 0.40
+newmtl roof2:pasted__blinn7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.85 0.74 0.56
+newmtl surfaceShader6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+newmtl walls_MUD_UVSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.40 0.35 0.29
+newmtl walls_col_02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.75 0.75 0.75
+newmtl walls_col_03SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl walls_col_05SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.36 0.36 0.36
+newmtl walls_col_06SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.27 0.27 0.27
+newmtl walls_mudSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.81 0.81 0.81
+newmtl walls_plaster:wall_gen_pink_v02SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.72 0.62 0.56
+newmtl walls_plaster:wall_gen_yellow_v01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.78 0.59 0.35
+newmtl walls_plaster:walls1:blinn4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.46 0.53 0.57
+newmtl walls_plaster:walls1:walls_lev02_01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.57 0.44 0.30

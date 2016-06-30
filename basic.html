@@ -53,6 +53,9 @@
 		alpha		: true,
 	});
 	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.shadowMap.enabled = true;
+	//renderer.shadowMap.type = THREE.BasicShadowMap;
+
 	document.body.appendChild( renderer.domElement );
 
 	// array of functions for the rendering loop
@@ -68,6 +71,12 @@
 	scene.add(light);
 
 	var pointLight = new THREE.PointLight(0xffffff);
+	pointLight.position.set(50, 0, 0);
+	pointLight.castShadow = true;
+	//pointLight.shadow.camera.near = 1;
+	//pointLight.shadow.camera.far = 3;
+	//pointLight.shadow.bias = 0.01;
+
 	scene.add(pointLight);
 
 	//////////////////////////////////////////////////////////////////////////////////
@@ -89,23 +98,33 @@
     var animatedObject;
 	// add a awesome logo to the scene
 	(function(){
-		var geometry = new THREE.BoxGeometry(1,1,1);
+		var planeGeometry = new THREE.PlaneGeometry(5,5);
+		var planeMaterial =    new THREE.MeshLambertMaterial({color: 0xffffff});
+		var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+		plane.receiveShadow  = true;
+		plane.position.set(0, 0, -0.75);
+		markerObjects[0].add(plane);
+
+		var geometry = new THREE.SphereGeometry(0.5,16,16);
 		var boxMat = new THREE.MeshLambertMaterial({ color: 0x00ff00});
-		var box = new THREE.Mesh(geometry, boxMat);
-		markerObjects[0].add(box);
+		var sphere = new THREE.Mesh(geometry, boxMat);
+		markerObjects[0].add(sphere);
+		sphere.castShadow = true;
 
         var manager = new THREE.LoadingManager();
         var loader = new THREE.OBJLoader( manager );
 
-        loader.load("models/houseAdj.obj", function(object) {
-            object.scale.set(0.1, 0.1, 0.1);
+        loader.load("models/building_one_reduced_x2.obj", function(object) {
+            object.scale.set(0.01, 0.01, 0.01);
+            object.rotation.x = Math.PI/2;
             markerObjects[1].add(object);
         });
 
-        loader.load("models/arrowAdj.obj", function(object) {
+        loader.load("models/pottery.obj", function(object) {
             object.scale.set(0.1, 0.1, 0.1);
+            object.rotation.x = Math.PI/2;
             markerObjects[2].add(object);
-            animatedObject = object;
+            //animatedObject = object;
         });
 	})();
 
@@ -179,8 +198,9 @@
         for(var i=0; i<NUM_OBJECTS; ++i) {
             markerObjects[i].visible = false;
         }
-        animatedObject.position.x += clock.getDelta();
-        if(animatedObject.position.x > 1) animatedObject.position.x = 0;
+
+        //animatedObject.position.x += clock.getDelta();
+        //if(animatedObject.position.x > 1) animatedObject.position.x = 0;
 
 		// see if this.markerId has been found
         markerIndex = undefined;
