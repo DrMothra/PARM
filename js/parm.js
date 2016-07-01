@@ -76,17 +76,14 @@ Parm.prototype.setupMarkerObject = function(markerObject, model) {
             markerObject.add(object);
         })
     } else {
-        var planeGeometry = new THREE.PlaneGeometry(5,5);
-        var planeMaterial =    new THREE.MeshLambertMaterial({color: 0xffffff});
-        var plane = new THREE.Mesh(planeGeometry,planeMaterial);
-        plane.receiveShadow  = true;
-        plane.position.set(0, 0, -0.75);
-        markerObject.add(plane);
-
-        var geometry = new THREE.SphereGeometry(0.5,16,16);
-        var boxMat = new THREE.MeshLambertMaterial({ color: 0x00ff00});
-        var sphere = new THREE.Mesh(geometry, boxMat);
-        sphere.castShadow = true;
+        var geometry = new THREE.CircleGeometry(0.25, 16);
+        var circleMat = new THREE.MeshBasicMaterial( {color: 0x000000});
+        var circle = new THREE.Mesh(geometry, circleMat);
+        markerObject.add(circle);
+        geometry = new THREE.SphereGeometry(0.25,16,16);
+        var sphereMat = new THREE.MeshLambertMaterial({ color: 0x00ff00});
+        var sphere = new THREE.Mesh(geometry, sphereMat);
+        sphere.position.set(0, 0, 0.5);
         markerObject.add(sphere);
     }
 };
