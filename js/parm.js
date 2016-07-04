@@ -3,6 +3,7 @@
  */
 
 //Augmented reality app
+var DISPLAY_TIME = 3.0;
 
 //Init this app from base
 function Parm() {
@@ -49,18 +50,21 @@ Parm.prototype.createScene = function() {
 
     var manager = new THREE.LoadingManager();
     this.loader = new THREE.OBJLoader( manager );
+    this.matLoader = new THREE.MTLLoader();
 
     var models = [
-        {name: "", scale: 1.0},
-        {name: "building_one_reduced_x2.obj", scale: 0.01},
-        {name: "pottery.obj", scale: 0.1}
+        {name: "", scale: 1.0, displayTime: -1},
+        {name: "build_one_mat.obj", scale: 0.01},
+        {name: "pithos.obj", scale: 0.01},
+        {name: "pottery.obj", scale:0.1}
     ];
 
-    this.objectIDs = [1, 30, 265];
+    this.objectIDs = [1, 30, 60, 265];
     this.numObjects = this.objectIDs.length;
     for(var i=0; i<this.numObjects; ++i) {
         this.markerObjects.push(new THREE.Object3D());
         this.markerObjects[i].markerID = this.objectIDs[i];
+        this.markerObjects[i].displayTime = -1;
         this.scene.add(this.markerObjects[i]);
         this.markerObjects[i].visible = false;
         this.setupMarkerObject(this.markerObjects[i], models[i]);
@@ -91,28 +95,30 @@ Parm.prototype.setupMarkerObject = function(markerObject, model) {
 Parm.prototype.createGUI = function() {
     //GUI - using dat.GUI
     this.guiControls = new function() {
-
+        this.Trigger = true;
+        this.Delay = 3.0;
     };
 
     var gui = new dat.GUI();
 
     //Add some folders
-    this.guiAppear = gui.addFolder("Appearance");
-    this.guiData = gui.addFolder("Data");
     this.gui = gui;
+
 };
 
 Parm.prototype.update = function() {
     //Perform any updates
     //this.delta = this.clock.getDelta();
-    var _this = this, markerIndex = undefined;
+    var _this = this, markerIndex = undefined, markerObject;
     BaseApp.prototype.update.call(this);
+    var delta = this.clock.getDelta();
 
     var domElement	= this.videoGrabbing.domElement;
     var markers	= this.jsArucoMarker.detectMarkers(domElement);
     for(var i=0; i<this.numObjects; ++i) {
         this.markerObjects[i].visible = false;
     }
+
     markers.forEach(function(marker){
         // if( marker.id !== 265 )	return
         for(i=0; i<_this.numObjects; ++i) {
@@ -123,9 +129,10 @@ Parm.prototype.update = function() {
         }
         if(markerIndex === undefined) return;
 
-        _this.jsArucoMarker.markerToObject3D(marker, _this.markerObjects[markerIndex]);
+        markerObject = _this.markerObjects[markerIndex];
+        _this.jsArucoMarker.markerToObject3D(marker, markerObject);
 
-        _this.markerObjects[markerIndex].visible = true;
+        markerObject.visible = true;
     })
 };
 
@@ -141,7 +148,7 @@ $(document).ready(function() {
             return;
         }
         app.createScene();
-        //app.createGUI();
+        app.createGUI();
 
         //GUI callbacks
 
